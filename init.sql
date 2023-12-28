@@ -1,7 +1,3 @@
-ENV POSTGRES_DB=log
-ENV POSTGRES_USER=athena
-ENV POSTGRES_PASSWORD=1234
-
 CREATE TABLE e_commerce_logs (
     accessed_date TIMESTAMP,
     duration_secs INT,
@@ -18,6 +14,4 @@ CREATE TABLE e_commerce_logs (
     returned VARCHAR(3),
     returned_amount NUMERIC(10, 2),
     pay_method VARCHAR(20)
-)
-\copy temp_ecommerce_logs FROM '/Users/athena/Downloads/E-commerce
-Website Logs_cleaned.csv' DELIMITER ',' CSV HEADER;
+);
